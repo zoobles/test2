@@ -1,0 +1,75 @@
+table, th, td{
+    margin-left: 30px;
+    border: 2px solid black;
+}
+
+#select{
+    width:200px;
+}
+
+td, th{
+    margin-left: 30px;
+    width: 25px;
+    height: 25px;
+    text-align: center;
+}
+
+#button{
+    margin-left: 30px;
+}
+
+#error{
+    margin-left: 30px;
+    width: 300px;
+}
+#Aircraft-Carrier{
+    background-color: red;
+}
+
+#Battleship{
+    background-color: yellow;
+}
+
+#Cruiser{
+    background-color: blue;
+}
+
+#Destroyer{
+    background-color: orange;
+}
+
+#Submarine{
+    background-color: green;
+}
+
+#type{
+    width: 125px;
+}
+
+#id_Aircraft_Carrier_X, #id_Aircraft_Carrier_Y{
+    width:40px;
+}
+#id_Battleship_X, #id_Battleship_Y{
+    width:40px;
+}
+#id_Cruiser_X, #id_Cruiser_Y{
+    width:40px;
+}
+#id_Destroyer_X, #id_Destroyer_Y{
+    width:40px;
+}
+#id_Submarine_X, #id_Submarine_Y{
+    width:40px;
+}
+
+/*shots ting*/
+#leftGamePanel{
+    float: left;
+    margin-right:10px;
+}
+#leftKeyPanel{
+    float: left;
+    margin-right:150px;
+}
+
+

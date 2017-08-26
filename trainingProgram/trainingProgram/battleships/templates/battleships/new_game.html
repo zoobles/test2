@@ -1,0 +1,22 @@
+{% extends 'main/base.html' %}
+
+{% block content %}
+    <link rel="stylesheet" href="/site_media/css/style.css">
+
+    <form action="/new_game" method="post">
+        {% csrf_token %}
+        <table>
+            <h1> Select user to invite</h1>
+            <select name="p2" id="p2">
+                {% for user in allUsrs %}
+                    <option value="{{ user.id }}">{{ user }}</option>
+                {% endfor %}
+            </select>
+        </table>
+        <input type="submit" value="select">
+    </form>
+
+
+    {#    <p>new game</p>#}
+    {#    {{ gameObj.id }} = {{ gameObj.player_1 }}#}
+{% endblock content %}

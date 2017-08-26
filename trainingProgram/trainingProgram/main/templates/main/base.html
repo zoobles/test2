@@ -1,0 +1,38 @@
+<head>
+    <title>Ally's Training Program</title>
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+
+    <meta charset="utf-8">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+    {% if refreshable %}
+        <meta http-equiv="refresh" content="5" >
+    {% endif %}
+</head>
+
+<!---navigation bar--->
+<nav class="navbar navbar-default">
+    <div class="navbar-header page-scroll">
+        <a class="navbar-brand page-scroll" href="/">Home</a>
+        <a class="navbar-brand page-scroll" href="/register">Register</a>
+        <a class="navbar-brand page-scroll" href="/new_game">New Game</a>
+        <a class="navbar-brand page-scroll" href="/games_list">Play</a>
+    </div>
+
+    <div class="navbar-header page-scroll navbar-right">
+        {% if user.is_active %}
+            <a class="navbar-brand page-scroll" href="/logout">Logout</a>
+        {% else %}
+            <a class="navbar-brand page-scroll" href="/login/">Login</a>
+        {% endif %}
+    </div>
+
+</nav>
+
+{% block login %}
+{% endblock login %}
+
+{% block content %}
+{% endblock content %}
+

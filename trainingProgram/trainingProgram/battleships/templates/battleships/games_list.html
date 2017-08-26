@@ -1,0 +1,28 @@
+{% extends 'main/base.html' %}
+
+{% block content %}
+    <h1>Here's a list of your games..</h1>
+    <br>
+
+    <p> you're player 1 in..</p>
+    {% for game in allPl1Games %}
+       <p>{{ game }}<a href="/lobby/{{game.id }}">PLAY</a></p>
+    {% endfor %}
+
+    <br>
+    <br>
+    
+    <p> and player 2 in..</p>
+    {% for game in allPl2Games %}
+       <p>{{ game }}<a href="/lobby/{{game.id }}">PLAY</a></p>
+    {% endfor %}
+{#        <div id="leftGamePanel" class="jumbotron">#}
+{#            {% include 'battleships/place.html' %}#}
+{#        </div>#}
+{##}
+{#        <div id="rightGamePanel" class="jumbotron">#}
+{#            {% include 'battleships/shoot.html' %}#}
+{#        </div>#}
+
+
+{% endblock content %}

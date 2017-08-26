@@ -1,0 +1,151 @@
+{% extends 'main/base.html' %}
+
+
+{% block content %}
+<link rel="stylesheet" href="/site_media/css/style.css">
+<h1>SHOOT</h1>
+
+<table>
+    <tr>
+        <td></td>
+        <td>A</td>
+        <td>B</td>
+        <td>C</td>
+        <td>D</td>
+        <td>E</td>
+        <td>F</td>
+        <td>G</td>
+        <td>H</td>
+        <td>I</td>
+    </tr>
+
+    <tr>
+        <td>1</td>
+        <td id="a1" bgcolor="{{ a1 }}"></td>
+        <td id="b1" bgcolor="{{ b1 }}"></td>
+        <td id="c1" bgcolor="{{ c1 }}"></td>
+        <td id="d1" bgcolor="{{ d1 }}"></td>
+        <td id="e1" bgcolor="{{ e1 }}"></td>
+        <td id="f1" bgcolor="{{ f1 }}"></td>
+        <td id="g1" bgcolor="{{ g1 }}"></td>
+        <td id="h1" bgcolor="{{ h1 }}"></td>
+        <td id="i1" bgcolor="{{ i1 }}"></td>
+    </tr>
+    <tr>
+        <td>2</td>
+        <td id="a2" bgcolor="{{ a2 }}"></td>
+        <td id="b2" bgcolor="{{ b2 }}"></td>
+        <td id="c2" bgcolor="{{ c2 }}"></td>
+        <td id="d2" bgcolor="{{ d2 }}"></td>
+        <td id="e2" bgcolor="{{ e2 }}"></td>
+        <td id="f2" bgcolor="{{ f2 }}"></td>
+        <td id="g2" bgcolor="{{ g2 }}"></td>
+        <td id="h2" bgcolor="{{ h2 }}"></td>
+        <td id="i2" bgcolor="{{ i2 }}"></td>
+    </tr>
+    <tr>
+        <td>3</td>
+        <td id="a3" bgcolor="{{ a3 }}"></td>
+        <td id="b3" bgcolor="{{ b3 }}"></td>
+        <td id="c3" bgcolor="{{ c3 }}"></td>
+        <td id="d3" bgcolor="{{ d3 }}"></td>
+        <td id="e3" bgcolor="{{ e3 }}"></td>
+        <td id="f3" bgcolor="{{ f3 }}"></td>
+        <td id="g3" bgcolor="{{ g3 }}"></td>
+        <td id="h3" bgcolor="{{ h3 }}"></td>
+        <td id="i3" bgcolor="{{ i3 }}"></td>
+    </tr>
+    <tr>
+        <td>4</td>
+        <td id="a4" bgcolor="{{ a4 }}"></td>
+        <td id="b4" bgcolor="{{ b4 }}"></td>
+        <td id="c4" bgcolor="{{ c4 }}"></td>
+        <td id="d4" bgcolor="{{ d4 }}"></td>
+        <td id="e4" bgcolor="{{ e4 }}"></td>
+        <td id="f4" bgcolor="{{ f4 }}"></td>
+        <td id="g4" bgcolor="{{ g4 }}"></td>
+        <td id="h4" bgcolor="{{ h4 }}"></td>
+        <td id="i4" bgcolor="{{ i4 }}"></td>
+    </tr>
+    <tr>
+        <td>5</td>
+        <td id="a5" bgcolor="{{ a5 }}"></td>
+        <td id="b5" bgcolor="{{ b5 }}"></td>
+        <td id="c5" bgcolor="{{ c5 }}"></td>
+        <td id="d5" bgcolor="{{ d5 }}"></td>
+        <td id="e5" bgcolor="{{ e5 }}"></td>
+        <td id="f5" bgcolor="{{ f5 }}"></td>
+        <td id="g5" bgcolor="{{ g5 }}"></td>
+        <td id="h5" bgcolor="{{ h5 }}"></td>
+        <td id="i5" bgcolor="{{ i5 }}"></td>
+    </tr>
+
+    <tr>
+        <td>6</td>
+        <td id="a6" bgcolor="{{ a6 }}"></td>
+        <td id="b6" bgcolor="{{ b6 }}"></td>
+        <td id="c6" bgcolor="{{ c6 }}"></td>
+        <td id="d6" bgcolor="{{ d6 }}"></td>
+        <td id="e6" bgcolor="{{ e6 }}"></td>
+        <td id="f6" bgcolor="{{ f6 }}"></td>
+        <td id="g6" bgcolor="{{ g6 }}"></td>
+        <td id="h6" bgcolor="{{ h6 }}"></td>
+        <td id="i6" bgcolor="{{ i6 }}"></td>
+    </tr>
+    <tr>
+        <td>7</td>
+        <td id="a7" bgcolor="{{ a7 }}"></td>
+        <td id="b7" bgcolor="{{ b7 }}"></td>
+        <td id="c7" bgcolor="{{ c7 }}"></td>
+        <td id="d7" bgcolor="{{ d7 }}"></td>
+        <td id="e7" bgcolor="{{ e7 }}"></td>
+        <td id="f7" bgcolor="{{ f7 }}"></td>
+        <td id="g7" bgcolor="{{ g7 }}"></td>
+        <td id="h7" bgcolor="{{ h7 }}"></td>
+        <td id="i7" bgcolor="{{ i7 }}"></td>
+    </tr>
+    <tr>
+        <td>8</td>
+        <td id="a8" bgcolor="{{ a8 }}"></td>
+        <td id="b8" bgcolor="{{ b8 }}"></td>
+        <td id="c8" bgcolor="{{ c8 }}"></td>
+        <td id="d8" bgcolor="{{ d8 }}"></td>
+        <td id="e8" bgcolor="{{ e8 }}"></td>
+        <td id="f8" bgcolor="{{ f8 }}"></td>
+        <td id="g8" bgcolor="{{ g8 }}"></td>
+        <td id="h8" bgcolor="{{ h8 }}"></td>
+        <td id="i8" bgcolor="{{ i8 }}"></td>
+    </tr>
+    <tr>
+        <td>9</td>
+        <td id="a9" bgcolor="{{ a9 }}"></td>
+        <td id="b9" bgcolor="{{ b9 }}"></td>
+        <td id="c9" bgcolor="{{ c9 }}"></td>
+        <td id="d9" bgcolor="{{ d9 }}"></td>
+        <td id="e9" bgcolor="{{ e9 }}"></td>
+        <td id="f9" bgcolor="{{ f9 }}"></td>
+        <td id="g9" bgcolor="{{ g9 }}"></td>
+        <td id="h9" bgcolor="{{ h9 }}"></td>
+        <td id="i9" bgcolor="{{ i9 }}"></td>
+    </tr>
+</table>
+
+<br>
+
+<form name="shootForm" action="" method="post">
+    {% csrf_token %}
+    {{ currentPlayer }}
+    <table>
+        <tr>
+            <th>Coordinate</th>
+        </tr>
+        <tr>
+            <th>{{form.coord}}</th>
+        </tr>
+    </table>
+    <input type="submit" value="fire!" id="button" action="/lobby/{{ lobbyId }}">
+
+    <!--<input type="submit" value="fire!" id="button"  action="/lobby/{{ lobbyId }}">-->
+</form>
+
+{% endblock content %}

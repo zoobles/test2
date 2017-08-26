@@ -1,0 +1,42 @@
+{% extends 'main/base.html' %}
+
+{% block content %}
+
+    <p>id={{ lobbyId }}</p>
+    <p>playerNum={{ playerNum }}</p>
+    <p>status={{ gameStatus }}</p>
+    <p>verbose status == {{ gameStatusVerbose }}</p>
+    <form name="refresh" action=" " method="post">
+        {% csrf_token %}
+        <input type="submit" value="refresh">
+    </form>
+
+    {% if gameStatus == playerNum %}
+    <form name="goToPlacements" action='/game/place/{{ lobbyId }}/' method="post">
+        {% csrf_token %}
+        <p>It's your turn to place your ships, click the button to go and do so!</p>
+        <input type="submit" value="Placements" action="myPlacements.html">
+    </form>
+    {% endif %}
+
+    {% if gameStatus == 3 and playerNum == 1%}
+    {{ gameStatus }}
+    <form name="goToShoot" action='/game/shoot/{{ lobbyId }}/' method="post">
+        {% csrf_token %}
+        <p>It's your turn to shoot, click the button to go and do so!</p>
+        <input type="submit" value="Go shoot!" action="shoot.html">
+    </form>
+    {% endif %}
+
+    {% if gameStatus == 4 and playerNum == 2%}
+    {{ gameStatus }}
+    <form name="goToShoot" action='/game/shoot/{{ lobbyId }}/' method="post">
+        {% csrf_token %}
+        <p>It's your turn to shoot, click the button to go and do so!</p>
+        <input type="submit" value="Go shoot!" action="shoot.html">
+    </form>
+    {% endif %}
+
+{% include "battleships/gameboard.html" %}
+
+{% endblock content %}
